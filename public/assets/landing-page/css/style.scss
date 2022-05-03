@@ -1,0 +1,19 @@
+$primary-color: #00aeef;
+$secondary-color: #4d7df0;
+$white-color: #ffffff;
+$black-color: #000000;
+
+body {
+    font-family: "Chivo", sans-serif;
+}
+
+#navbar {
+    .nav-link {
+        color: $black-color;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
