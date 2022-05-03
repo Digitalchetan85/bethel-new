@@ -25,20 +25,26 @@ body {
 }
 
 #services{
-    .card{
-        transform: scale(0.9);
-        transition: all 0.5s ease;
-        .fa-user-tie, .fa-computer-mouse, .fa-comments, .fa-handshake-simple, .fa-star, .fa-stethoscope{
-            padding: 20px;
-            font-size: 30px;
-            background-color: $secondary-color;
-           color: $white-color;
-           border-radius: 50%;
-           margin: 15px 5px;
-       }
-       &:hover {
-           transform: scale(1);
-           transition: all 0.5s ease;
-       }
+    .text-icon-grid{
+        .text-icon-squared { 
+                    .icon-big{
+            transform: scale(0.9);
+            transition: all 0.5s ease;
+            .icon-manager, .icon-technology, .icon-talk, .icon-hand-shake, .icon-signs, .icon-stethoscope{
+                padding: 20px;
+                font-size: 30px;
+                background-color: $white-color;
+               color: $secondary-color;
+               border-radius: 50%;
+               margin: 15px 5px;
+           }
+           &:hover {
+               transform: scale(1);
+               transition: all 0.5s ease;
+           }
+            }
+
         }
+    }
+   
     }

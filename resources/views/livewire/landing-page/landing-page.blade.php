@@ -108,7 +108,7 @@
         </div>
     </div>
 
-    <div class="py-3 py-md-5" id="services">
+    <!-- <div class="py-3 py-md-5" id="services">
         <div class="container">
             <div class="text-center">
                 <h2 class="pt-2 text-center text-black mb-0">All Computer & Tablet Services</h2>
@@ -121,7 +121,7 @@
                             <i class="fa-brands fa-laptop-medical"></i>
                             <h5 class="card-title text-center text-black">Experienced Professionals</h5>
                             <p class="card-text text-black">We pride ourselves on being a professional computer repair facility</p>
-                            <!-- <a href="#" class="btn btn-primary">More Info</a> -->
+                            <a href="#" class="btn btn-primary">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
                             <i class="fa-solid fa-compact-disc"></i>
                             <h5 class="card-title text-center text-black">Our technical experts will get you honest, reliable and professional help </p>
-                                <!-- <a href="#" class="btn btn-primary">More Info</a> -->
+                                <a href="#" class="btn btn-primary">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                             <i class="fa-solid fa-screwdriver-wrench"></i>
                             <h5 class="card-title text-center text-black">Trustworthy See Reviews</h5>
                             <p class="card-text text-black">Our business has been built on trust and customer satisfaction!</p>
-                            <!-- <a href="#" class="btn btn-primary">More Info</a> -->
+                            <a href="#" class="btn btn-primary">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                             <i class="fa-solid fa-shield-virus"></i>
                             <h5 class="card-title text-center text-black">Friendly Service</h5>
                             <p class="card-text text-black">We work through a remote super-secure connection, and give you a full report when our work is done.Most of the services below are repaired within hours, and in most cases same day!</p>
-                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                             <i class="fa-solid fa-shield-virus"></i>
                             <h5 class="card-title text-center text-black">Excellent Reputation</h5>
                             <p class="card-text text-black">We have built our reputation on the attention to details and our loyal service to our customersExcellent Reputation!</p>
-                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -172,16 +172,16 @@
                             <i class="fa-solid fa-shield-virus"></i>
                             <h5 class="card-title text-center text-black">Affordable Diagnosis</h5>
                             <p class="card-text text-black">We will diagnose your issues, provide you with options and give you a price for FREE!</p>
-                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- testing -->
-    <!-- <div class="block bottom-md">
+    <div id="services" class="block bottom-md py-3">
         <div class="container">
             <h2 class="text-center">Why Choose <span class="color">Us</span></h2>
             <p class="info text-center">There are many valid reasons why you should choose us to take care of your
@@ -243,7 +243,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 <!-- testing ends -->
 
