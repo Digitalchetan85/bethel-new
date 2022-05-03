@@ -4,16 +4,41 @@ $white-color: #ffffff;
 $black-color: #000000;
 
 body {
-    font-family: "Chivo", sans-serif;
+  font-family: "Chivo", sans-serif;
 }
 
 #navbar {
-    .nav-link {
-        color: $black-color;
-        font-weight: 500;
-        text-transform: uppercase;
-        &:hover {
-            color: $secondary-color;
+  .nav-link {
+    color: $black-color;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+#fourth-section {
+  .btn{
+    color: black;
+  }
+}
+
+#services{
+    .card{
+        transform: scale(0.9);
+        transition: all 0.5s ease;
+        .fa-user-tie, .fa-computer-mouse, .fa-comments, .fa-handshake-simple, .fa-star, .fa-stethoscope{
+            padding: 20px;
+            font-size: 30px;
+            background-color: $secondary-color;
+           color: $white-color;
+           border-radius: 50%;
+           margin: 15px 5px;
+       }
+       &:hover {
+           transform: scale(1);
+           transition: all 0.5s ease;
+       }
         }
     }
-}
