@@ -150,6 +150,63 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <form class="rounded bg-white p-2">
+              <div class="container">
+                  <h3 class="fs-4 text-primary text-center">Get Instant Call Back</h3>
+                  <div class="row mb-2">
+                      <div class="col-md-12">
+                          <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1"><i
+                                      class="fa fa-user text-primary"></i></span>
+                              <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                                  aria-describedby="basic-addon1">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-2">
+                      <div class="col-md-12">
+                          <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1"><i
+                                      class="fa fa-envelope text-primary"></i></span>
+                              <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                  aria-describedby="basic-addon1">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa fa-phone-volume text-primary"></i></span>
+                            <input type="tel" class="form-control" placeholder="Phone" aria-label="Email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-text"><i
+                                class="fa fa-message text-primary"></i></span>
+                            <textarea class="form-control" aria-label="With textarea" rows="3" placeholder="Message"></textarea>
+                          </div>
+                    </div>
+                </div>
+                  <div class="row-mb-2">
+                      <div class="col-md-12">
+                          <button type="submit" class="btn btn-primary form-control">Submit</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -213,6 +270,7 @@
     </script>
 
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>
