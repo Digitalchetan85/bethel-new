@@ -218,7 +218,9 @@
                                     <h5 class="card-title">Macbook Water Damage Repair</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +231,9 @@
                                     <h5 class="card-title">Macbook Air Repair</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +245,9 @@
                                     </h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +258,9 @@
                                     <h5 class="card-title">Macbook Battery Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +271,9 @@
                                     <h5 class="card-title">iMac Repair</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
