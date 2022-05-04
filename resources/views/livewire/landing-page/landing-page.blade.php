@@ -111,8 +111,9 @@
                 </div>
                 <div class="col-md-4 align-self-center">
                     <div class="text-center">
-                        <a href="tel:09513838585" class="btn btn-secondary text-decoration-none text-uppercase">Call
-                            Now</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Call Now
+</button>
                     </div>
                 </div>
             </div>
@@ -308,7 +309,9 @@
                                     <h5 class="card-title">Laptop Keyboard Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +322,9 @@
                                     <h5 class="card-title">Laptop Screen Repair</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -331,7 +336,9 @@
                                     </h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go Somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -342,8 +349,9 @@
                                     <h5 class="card-title">Laptop Cleaning Service</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
-                                </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>                                </div>
                             </div>
                         </div>
                         <div class="item">
@@ -353,7 +361,9 @@
                                     <h5 class="card-title">Laptop Fan Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -377,7 +387,9 @@
                                     <h5 class="card-title">Computer Won’t Turn On</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -388,7 +400,9 @@
                                     <h5 class="card-title">Noisy Computer</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -400,7 +414,9 @@
                                     </h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -411,7 +427,9 @@
                                     <h5 class="card-title">Computer Freezes and Restarts</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -422,7 +440,9 @@
                                     <h5 class="card-title">Computer is Too Slow</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -433,7 +453,9 @@
                                     <h5 class="card-title">Printer, Keyboard or Mouse Doesn’t Work</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -444,7 +466,9 @@
                                     <h5 class="card-title">Screen Doesn’t Show Anything</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button> 
                                 </div>
                             </div>
                         </div>
@@ -464,7 +488,7 @@
                     <p class="info">for one of our professional computer repair techs to help you with your
                         Desktop, Laptop, Mac or other inquiry</p>
                     <div class="btn-inline">
-                        <a class="btn btn-invert" href="{{ route('contact') }}">Contact Us</a>
+                        <!-- <a class="btn btn-invert" href="{{ route('contact') }}">Contact Us</a> -->
                     </div>
                 </div>
             </div>
@@ -549,36 +573,61 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                              Accordion Item #1
+                            How long will my repair/service take?
                             </button>
                           </h2>
                           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
-                              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              <p>We repair most faults within 2-3 days, we also offer a 24 hour priority service (subject to availability of parts if needed). If we need to order parts then we can normally get these next day delivery. We realise how difficult being without your computer can be and we will always try to get it back to you as quickly as possible.</p>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                              Accordion Item #2
+                            How much will my repair cost me?
                             </button>
                           </h2>
                           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
-                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <p>We will always offer you a fixed price for the repair, for example if your laptop screen needs replacing we will give you a total price for the work before starting. In the event we need to diagnose the fault first we charge £30 labour which is waived if you go ahead with the repair. We don’t want you to have any nasty surprises; we want you to know exactly what your repair will cost before we complete the work.</p>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                              Accordion Item #3
+                            Why would I want to use you when I could go to a big brand high street store such as PC World?
                             </button>
                           </h2>
                           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body">
-                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <p>Offering a personal service is top of our list; you will speak directly to the person working on your computer so you can explain the situation in detail. We turnaround repairs quickly, we don’t send anything away to service centres and we don’t quote 5+ days for repairs. We don’t charge any upfront costs, you only pay for work once it’s completed and when you are happy with it.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false" aria-controls="panelsStayOpen-collapsefour">
+                            Can you replace cracked/damaged laptop screens?
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfour">
+                            <div class="accordion-body">
+                            <p>Absolutely, we repair laptop screens all the time and it’s much cheaper than buying a new laptop. Contact Us for a quick quote, we have the majority of laptop screens in stock and can normally replace your screen the same day!</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+                            I’m worried about my data, is it safe?
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
+                            <div class="accordion-body">
+                            <p>We will always take great care in looking after your data. We conform to the Data Protection Act and any data we hold is held in strict confidence. We undertake work for a number of local businesses including solicitors and high street shops and understand how important personal data is. Any customer data that is stored is always stored password protected and in encrypted format. We always advise if possible you take a backup of any data on your computer prior to any work being undertaken and we can discuss any backup options with you if needed.</p>
+
                             </div>
                           </div>
                         </div>
@@ -653,6 +702,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     
