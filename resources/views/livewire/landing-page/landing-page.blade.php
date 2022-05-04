@@ -303,9 +303,9 @@
                     <div class="owl-carousel owl-theme" id="laptop-repair">
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-1-1.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Water Damage Repair</h5>
+                                    <h5 class="card-title">Laptop Keyboard Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -314,9 +314,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-1-2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Air Repair</h5>
+                                    <h5 class="card-title">Laptop Screen Repair</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -325,9 +325,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-1-3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mac Hard Drive Replacement
+                                    <h5 class="card-title">Laptop Power Jack Replacement
                                     </h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
@@ -337,9 +337,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-1-4.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Battery Replacement</h5>
+                                    <h5 class="card-title">Laptop Cleaning Service</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -348,31 +348,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-1-5.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">iMac Repair</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Macbook Keyboard Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mac Screen Replacement</h5>
+                                    <h5 class="card-title">Laptop Fan Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -394,9 +372,9 @@
                     <div class="owl-carousel owl-theme" id="pc-repair">
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-1.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Water Damage Repair</h5>
+                                    <h5 class="card-title">Computer Won’t Turn On</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -405,9 +383,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Air Repair</h5>
+                                    <h5 class="card-title">Noisy Computer</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -416,9 +394,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mac Hard Drive Replacement
+                                    <h5 class="card-title">Computer Fails to Start
                                     </h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
@@ -428,9 +406,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-4.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Battery Replacement</h5>
+                                    <h5 class="card-title">Computer Freezes and Restarts</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -439,9 +417,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-5.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">iMac Repair</h5>
+                                    <h5 class="card-title">Computer is Too Slow</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -450,9 +428,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-6.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Macbook Keyboard Replacement</h5>
+                                    <h5 class="card-title">Printer, Keyboard or Mouse Doesn’t Work</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
@@ -461,9 +439,9 @@
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
+                                <img src="{{asset('assets/images/img-service-2-7.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mac Screen Replacement</h5>
+                                    <h5 class="card-title">Screen Doesn’t Show Anything</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
