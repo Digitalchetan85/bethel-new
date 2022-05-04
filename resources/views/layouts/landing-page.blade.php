@@ -21,8 +21,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link testing -->
 
     <link rel="stylesheet" href="{{asset('assets/landing-page/css/custom.css')}}">
@@ -82,7 +85,71 @@
 
     {{$slot}}
 
+    <!-- Footer -->
+    <div class="page-footer">
+        <div class="footer-content">
+            <div class="back-to-top"><a href="#top"><span class="icon icon-chevron-arrow-up"></span></a></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="logo">
+                            <div class="text-center">
+                                <img src="{{asset('assets/images/new/logo.png')}}" alt="Logo" class="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-11">
+                        <ul class="footer-menu">
+                            <li><a href="#">iPad Repair</a></li>
+                            <li><a href="{{route('services.laptop-repair')}}">Laptop Repair</a></li>
+                            <li><a href="{{route('services.mac-repair')}}">Mac Repair</a></li>
+                            <li><a href="{{route('services.pc-repair')}}">Computer Repair</a></li>
+                        </ul>
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a class="icon icon-facebook" href="#"></a>
+                                </li>
+                                <li>
+                                    <a class="icon icon-twitter" href="#"></a>
+                                </li>
+                                <li>
+                                    <a class="icon icon-google-plus" href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-phone">
+                            <i class="icon icon-phone-receiver"></i>Call Us to Our Office <span class="number">+91 98800
+                                37944 / 88804 70007 </span>
+                        </div>
+                        <div class="row footer-columns">
+                            <div class="col-lg-2 visible-lg"></div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="contact-info"><i class="icon icon-placeholder-for-map"></i>#528, Shop No. 1,
+                                    1st Floor, Kempamma Building, Nagavara, Banglore 560 045</div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="contact-info"><i class="icon icon-clock"></i>Mon-Sat: 10:00am -8:00pm
+                                    <br> Sun: Holiday
+                                </div>
+                            </div>
+                            <div class="col-lg-2 visible-lg"></div>
+                            <div class="col-md-4 col-lg-3">
+                                <ul class="footer-links">
+                                    <li><a href="{{route('terms-and-conditions')}}">Terms and Conditions</a></li>
+                                    <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="copyright">© 2022 Bethel Computech. All Rights Reserved. Design and Developed by <a
+                        href="https://shanthaswebz.com" target="_blank"
+                        style="color:#9f9f9f; text-decoration: none;">Shanthas Webz</a>.</div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -143,7 +210,6 @@
           utilsScript: "{{asset('assets/landing-page/input-tel/js/utils.js')}}",
         });
     </script>
-
 
     @livewireScripts
 </body>
