@@ -284,7 +284,9 @@
                                     <h5 class="card-title">Macbook Keyboard Replacement</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Go somewhere
+</button>
                                 </div>
                             </div>
                         </div>
@@ -427,7 +429,7 @@
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
                                     {{-- <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a> --}}
-                                    <button type="button" class="btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Go somewhere
                                       </button> 
                                 </div>
@@ -440,7 +442,7 @@
                                     <h5 class="card-title">Computer Freezes and Restarts</h5>
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Go somewhere
 </button> 
                                 </div>
