@@ -120,7 +120,7 @@
                         </div>
                         <div class="footer-phone">
                             <i class="icon icon-phone-receiver"></i>Call Us to Our Office <br /><span class="number">
-                                <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944</a><br />  
+                                <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944 /</a>  
                                 <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804 70007</a></span>
                         </div>
                         <div class="row footer-columns">

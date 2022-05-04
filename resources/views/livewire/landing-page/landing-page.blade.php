@@ -499,7 +499,8 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="h-lg pb-4">Get <span class="color">Your Computer</span> Fixed NOW!</h2>
-                    <h3 class="subtitle">+91 98800 37944 / 88804 70007</h3>
+                    <h3 class="subtitle"> <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944 / </a>  
+                                <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804 70007</a></span></h3>
                     <p class="info">for one of our professional computer repair techs to help you with your
                         Desktop, Laptop, Mac or other inquiry</p>
                     <div class="btn-inline">
