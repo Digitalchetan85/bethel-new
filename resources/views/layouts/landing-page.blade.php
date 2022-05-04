@@ -8,7 +8,7 @@
 
     <title>Bethel Computech</title>
     <!-- Bootstrap CSS -->
-    <link href="{{asset('assets/landing-page/css/bootstrap.css')}}" rel="stylesheet">    
+    <link href="{{asset('assets/landing-page/css/bootstrap.css')}}" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('assets/landing-page/css/style.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -21,21 +21,31 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- link testing -->
-        
-   <!-- Icon Font-->
-	<link href="{{ asset('assets/iconfont/style.css')}}" rel="stylesheet">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-	
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link testing -->
+
+    <link rel="stylesheet" href="{{asset('assets/landing-page/css/custom.css')}}">
+
+    <!-- Icon Font-->
+    <link href="{{ asset('assets/iconfont/style.css')}}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Chivo:400,400i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css"
+        integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/landing-page/input-tel/css/intlTelInput.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('assets/landing-page/country-flag/css/countrySelect.min.css')}}">
+
     @livewireStyles
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" style="z-index: 1" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" id="navbar">
         <div class="container">
             <a class="navbar-brand text-primary" href="/">
                 <h2>Bethel Computech</h2>
@@ -95,7 +105,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="{{ asset('assets/js/custom.js')}}"></script>
+    <script src="{{asset('assets/landing-page/js/main.js') }}"></script>
+    <script src="{{asset('assets/landing-page/input-tel/js/intlTelInput.min.js')}}"></script>
+    <script src="{{asset('assets/landing-page/country-flag/js/countrySelect.min.js')}}"></script>
+    <script>
+        $("#country_selector").countrySelect({
+                defaultCountry: "in",
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                // responsiveDropdown: true,
+                preferredCountries: ['ca', 'gb', 'us']
+            });
+    </script>
+
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+          // allowDropdown: false,
+        //   autoHideDialCode: true,
+        //    autoPlaceholder: "9999999999",
+        //    dropdownContainer: document.body,
+          // excludeCountries: ["us"],
+        //    formatOnDisplay: false,
+        //   geoIpLookup: function(callback) {
+        //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //       var countryCode = (resp && resp.country) ? resp.country : "";
+        //       callback(countryCode);
+        //     });
+        //   },
+          //hiddenInput: "full_number",
+          initialCountry: "in",
+          // localizedCountries: { 'de': 'Deutschland' },
+        //   nationalMode: true,
+          // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        //   placeholderNumberType: "9876543210",
+          // preferredCountries: ['cn', 'jp'],
+        // separateDialCode: true,
+          utilsScript: "{{asset('assets/landing-page/input-tel/js/utils.js')}}",
+        });
+    </script>
+
 
     @livewireScripts
 </body>

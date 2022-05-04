@@ -1,10 +1,13 @@
 <div>
-    <div id="first-section">
+    <div id="first-section" class="position-relative">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -29,222 +32,449 @@
                     </div> --}}
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> --}}
         </div>
     </div>
+
+    <div id="contact-form" class="position-absolute top-50 end-0 translate-middle-y me-5" style="z-index:1;">
+        <form class="rounded bg-white p-2">
+            <div class="container">
+                <h3 class="fs-4 text-primary">Get Instant Call Back</h3>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa fa-user text-primary"></i></span>
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa fa-envelope text-primary"></i></span>
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <input id="country_selector" type="text" class="form-control w-100">
+                        <label for="country_selector" style="display:none;">Select a country here...</label>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <input id="phone" name="phone" type="tel" class="form-control" placeholder="XXXXXXXXXX">
+                    </div>
+                </div>
+                <div class="row mb-2 d-none">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="country_selector_code" name="country_selector_code"
+                            data-countrycodeinput="1" readonly="readonly"
+                            placeholder="Selected country code will appear here" />
+                        <label for="country_selector_code">...and the selected country code will be updated
+                            here</label>
+                    </div>
+                </div>
+                <div class="row-mb-2">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary form-control">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
 
     <div id="second-section" class="py-3 py-md-3 bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 align-self-center">
                     <div class="text-center">
                         <h2 class="text-white">Get Your Laptop Service at just 499*/-</h2>
                     </div>
                 </div>
                 <div class="col-md-4 align-self-center">
                     <div class="text-center">
-                        <a href="tel:09513838585" class="btn btn-secondary text-decoration-none text-uppercase">Call Now</a>
+                        <a href="tel:09513838585" class="btn btn-secondary text-decoration-none text-uppercase">Call
+                            Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="third-section" class="py-3 py-md-5">
+    <div class="block py-3 py-md-5">
+        <div class="container">
+            <div class="row category-carousel">
+                <div class="col-sm-4">
+                    <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
+                        <div class="image">
+                            <img src="{{ asset('assets/images/category-img-01.jpg') }}" alt="">
+                        </div>
+                        {{-- <div class="image_hover light">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <p>Computer Repair specializes in repairs of all kinds of Apple products
+                                        including, MacBooks, iMacs, Mac Pros, Macbook retina and Mac Mini’s. We only
+                                        Use Original Apple Parts we will never install a knock off part into your
+                                        Mac product.</p>
+                                    <p><a href="{{route('services.mac-repair')}}" class="btn btn-sm">More info</a></p>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="caption top">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <h3 class="name">Apple & <br>Mac</h3>
+                                    <p>Repair</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
+                        <div class="image">
+                            <img src="{{ asset('assets/images/category-img-02.jpg') }}" alt="">
+                        </div>
+                        {{-- <div class="image_hover">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <p>While You Wait or Same Day Service If you decide not to proceed the repair of
+                                        your laptop, we will pay you cash to buy it and return your hard drive or
+                                        transfer data for you.</p>
+                                    <p><a href="{{route('services.laptop-repair')}}" class="btn btn-sm">More info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="caption middle">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <h3 class="name">Laptop</h3>
+                                    <p class="white">Repair</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
+                        <div class="image">
+                            <img src="{{ asset('assets/images/category-img-03.jpg') }}" alt="">
+                        </div>
+                        {{-- <div class="image_hover color">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <p>We service all makes and models of Computers. Most Computers are repaired
+                                        same day with parts available in stock. We service all models including: HP,
+                                        Apple, Acer, Lenovo/IBM, Dell, Samsung, Gateway, Asus, Alienware & more…
+                                    </p>
+                                    <p><a href="{{route('services.pc-repair')}}" class="btn btn-sm">More info</a></p>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="caption bottom">
+                            <div class="vert-wrap">
+                                <div class="vert">
+                                    <h3 class="name white">PC & Computer</h3>
+                                    <p>Repair</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="mac-services" class="py-3 py-md-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="image text-center">
-                        <img src="{{ asset('assets/images/category-img-01.jpg') }}" alt="">
-                        <h3 class="name">Apple & Mac</h3>
-                        <p>Repair</p>
+                <div class="col-md-12">
+                    <h2 class="py-4 text-center">Mac Services</h2>
+                    <div class="owl-carousel owl-theme" id="mac-repair">
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Water Damage Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Air Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Hard Drive Replacement
+                                    </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Battery Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">iMac Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Keyboard Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Screen Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="image text-center">
-                        <img src="{{ asset('assets/images/category-img-02.jpg') }}" alt="">
-                        <h3 class="name">Laptop</h3>
-                        <p class="white">Repair</p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="image text-center">
-                        <img src="{{ asset('assets/images/category-img-03.jpg') }}" alt="">
-                        <h3 class="name white">PC & Computer</h3>
-                        <p>Repair</p>
-                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
+    </section>
 
-    <div id="fourth-section" class="block">
+    <section id="laptop-services" class="py-3 py-md-5">
         <div class="container">
-            <div class="text-center">
-                <h2 class="h-lg">Get <span class="color">Your Computer</span> Fixed NOW!</h2>
-                <a href="tel:09880037944" class="text-decoration-none">
-                    <h3 class="subtitle">+91 98800 37944 </h3>
-                </a>
-                <a href="tel:08880470007" class="text-decoration-none">
-                    <h3 class="subtitle">+91 88804 70007</h3>
-                </a>
-                <p class="info">for one of our professional computer repair techs to help you with your
-                    Desktop, Laptop, Mac or other inquiry</p>
-                <div class="btn">
-                    <a class="btn btn-invert bg-black text-white" href="{{ route('contact') }}">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- <div class="py-3 py-md-5" id="services">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="pt-2 text-center text-black mb-0">All Computer & Tablet Services</h2>
-                <p class="py-1 text-center text-black fst-italic">We can Solve your Hardware and Software Problems</p>
-            </div>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center">
-                            <i class="fa-brands fa-laptop-medical"></i>
-                            <h5 class="card-title text-center text-black">Experienced Professionals</h5>
-                            <p class="card-text text-black">We pride ourselves on being a professional computer repair facility</p>
-                            <a href="#" class="btn btn-primary">More Info</a>
+                <div class="col-md-12">
+                    <h2 class="py-4 text-center">Laptop Services</h2>
+                    <div class="owl-carousel owl-theme" id="laptop-repair">
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Water Damage Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Air Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Hard Drive Replacement
+                                    </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Battery Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">iMac Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Keyboard Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Screen Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
-                            <i class="fa-solid fa-compact-disc"></i>
-                            <h5 class="card-title text-center text-black">Our technical experts will get you honest, reliable and professional help </p>
-                                <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <h5 class="card-title text-center text-black">Trustworthy See Reviews</h5>
-                            <p class="card-text text-black">Our business has been built on trust and customer satisfaction!</p>
-                            <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
-                            <i class="fa-solid fa-shield-virus"></i>
-                            <h5 class="card-title text-center text-black">Friendly Service</h5>
-                            <p class="card-text text-black">We work through a remote super-secure connection, and give you a full report when our work is done.Most of the services below are repaired within hours, and in most cases same day!</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
-                            <i class="fa-solid fa-shield-virus"></i>
-                            <h5 class="card-title text-center text-black">Excellent Reputation</h5>
-                            <p class="card-text text-black">We have built our reputation on the attention to details and our loyal service to our customersExcellent Reputation!</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center animate__animated animate__flash animate__delay-1s animation__repeate-1">
-                            <i class="fa-solid fa-shield-virus"></i>
-                            <h5 class="card-title text-center text-black">Affordable Diagnosis</h5>
-                            <p class="card-text text-black">We will diagnose your issues, provide you with options and give you a price for FREE!</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </section>
 
-    <!-- testing -->
-    <div id="services" class="block bottom-md py-3">
+    <section id="pc-services" class="py-3 py-md-5">
         <div class="container">
-            <h2 class="text-center">Why Choose <span class="color">Us</span></h2>
-            <p class="info text-center">There are many valid reasons why you should choose us to take care of your
-                valuable device</p>
-            <div class="text-icon-grid">
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-manager"></span></div>
-                        <h5 class="title">Experienced Professionals</h5>
-                        <div class="text">We pride ourselves on being a professional computer repair
-                            facility</div>
-                    </div>
-                </div>
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-technology"></span></div>
-                        <h5 class="title">Expert Technical Skills</h5>
-                        <div class="text">Our technical experts will get you honest, reliable and
-                            professional help </div>
-                    </div>
-                </div>
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-talk"></span></div>
-                        <h5 class="title">Trustworthy See Reviews</h5>
-                        <div class="text">Our business has been built on trust and customer satisfaction
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="py-4 text-center">PC Services</h2>
+                    <div class="owl-carousel owl-theme" id="pc-repair">
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Water Damage Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Air Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Hard Drive Replacement
+                                    </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Battery Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">iMac Repair</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Macbook Keyboard Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mac Screen Replacement</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p> --}}
+                                    <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-hand-shake"></span></div>
-                        <h5 class="title">Friendly Service</h5>
-                        <div class="text">Most of the services below are repaired within hours, and in
-                            most cases same day!</div>
-                    </div>
-                </div>
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-signs"></span></div>
-                        <h5 class="title">Excellent Reputation</h5>
-                        <div class="text">We have built our reputation on the attention to details and
-                            our loyal service to our customersExcellent Reputation</div>
-                    </div>
-                </div>
-                <div class="text-icon-squared animation" data-animation="fadeInUp" data-animation-delay="0s">
-                    <div class="hover"></div>
-                    <div class="caption">
-                        <div class="icon-big"><span class="icon icon-stethoscope"></span></div>
-                        <h5 class="title">Affordable Diagnosis</h5>
-                        <div class="text">We will diagnose your issues, provide you with options and give
-                            you a price for FREE!</div>
-                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-
-<!-- testing ends -->
+    </section>
 
 </div>
