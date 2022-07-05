@@ -5,6 +5,7 @@ use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\DesktopComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\LandingPage\LandingPage;
+use App\Http\Livewire\LandingPage\ThankYou;
 use App\Http\Livewire\LaptopComponent;
 use App\Http\Livewire\MonitorComponent;
 use App\Http\Livewire\MonitorDetails;
@@ -38,6 +39,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', HomeComponent::class)->name('home');
+Route::get('/thank-you', ThankYou::class)->name('thank-you');
 Route::get('/laptop-repair-service-in-bangalore', LandingPage::class)->name('landing-page');
 Route::get('/about', AboutComponent::class)->name('about');
 Route::get('/laptop', LaptopComponent::class)->name('laptop');

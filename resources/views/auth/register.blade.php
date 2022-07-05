@@ -86,7 +86,7 @@
                         <div class="inputs-col">
                             <div class="input-wrapper">
                                 <label>Name<span class="required">*</span></label>
-                                <input type="text" name="name" class="input-custom input-full" :value="old('email')" required autofocus>
+                                <input type="text" name="name" class="input-custom input-full">
                             </div>
                             <div class="input-wrapper">
                                 <label>Email<span class="required">*</span></label>

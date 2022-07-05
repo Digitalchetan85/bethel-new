@@ -8,12 +8,15 @@ body {
 }
 
 #navbar {
+  .navbar-nav {
+    background-color: $primary-color !important;
+  }
   .nav-link {
-    color: $black-color;
+    color: $white-color;
     font-weight: 500;
     text-transform: uppercase;
     &:hover {
-      color: $secondary-color;
+      color: $white-color;
     }
   }
 }
@@ -23,4 +26,17 @@ body {
     color: black;
   }
 }
+.iti, .country-select {
+  width: 100% !important;
+}
 
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  #contact-form {
+    position: initial !important;
+    transform:translateY(0) !important;
+    top: 0 !important;
+  }
+  .text-icon-squared {
+    width: 100% !important;
+  }
+}

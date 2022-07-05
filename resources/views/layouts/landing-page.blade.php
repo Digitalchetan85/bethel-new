@@ -60,22 +60,22 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" aria-current="page" href="{{route('landing-page')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mac Repair</a>
+                        <a class="nav-link" href="#mac-repair">Mac Repair</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Laptop Repair</a>
+                        <a class="nav-link" href="#laptop-repair">Laptop Repair</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Desktop Repair</a>
+                        <a class="nav-link" href="#pc-reapir">PC Repair</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Faqs</a>
+                        <a class="nav-link" href="#faq">Faqs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#call-us">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -84,6 +84,7 @@
 
 
     {{$slot}}
+
 
     <!-- Footer -->
     <div class="page-footer">
@@ -99,12 +100,12 @@
                         </div>
                     </div>
                     <div class="col-md-11">
-                        <ul class="footer-menu">
+                        {{-- <ul class="footer-menu">
                             <li><a href="#">iPad Repair</a></li>
                             <li><a href="{{route('services.laptop-repair')}}">Laptop Repair</a></li>
                             <li><a href="{{route('services.mac-repair')}}">Mac Repair</a></li>
                             <li><a href="{{route('services.pc-repair')}}">Computer Repair</a></li>
-                        </ul>
+                        </ul> --}}
                         <div class="social-links">
                             <ul>
                                 <li>
@@ -120,8 +121,10 @@
                         </div>
                         <div class="footer-phone">
                             <i class="icon icon-phone-receiver"></i>Call Us to Our Office <br /><span class="number">
-                                <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944 /</a>  
-                                <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804 70007</a></span>
+                                <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944
+                                    /</a>
+                                <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804
+                                    70007</a></span>
                         </div>
                         <div class="row footer-columns">
                             <div class="col-lg-2 visible-lg"></div>
@@ -152,63 +155,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <form class="rounded bg-white p-2">
-              <div class="container">
-                  <h3 class="fs-4 text-primary text-center">Get Instant Call Back</h3>
-                  <div class="row mb-2">
-                      <div class="col-md-12">
-                          <div class="input-group">
-                              <span class="input-group-text" id="basic-addon1"><i
-                                      class="fa fa-user text-primary"></i></span>
-                              <input type="text" class="form-control" placeholder="Name" aria-label="Username"
-                                  aria-describedby="basic-addon1">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row mb-2">
-                      <div class="col-md-12">
-                          <div class="input-group">
-                              <span class="input-group-text" id="basic-addon1"><i
-                                      class="fa fa-envelope text-primary"></i></span>
-                              <input type="email" class="form-control" placeholder="Email" aria-label="Email"
-                                  aria-describedby="basic-addon1">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1"><i
-                                    class="fa fa-phone-volume text-primary"></i></span>
-                            <input type="tel" class="form-control" placeholder="Phone" aria-label="Email"
-                                aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <span class="input-group-text"><i
-                                class="fa fa-message text-primary"></i></span>
-                            <textarea class="form-control" aria-label="With textarea" rows="3" placeholder="Message"></textarea>
-                          </div>
-                    </div>
-                </div>
-                  <div class="row-mb-2">
-                      <div class="col-md-12">
-                          <button type="submit" class="btn btn-primary form-control">Submit</button>
-                      </div>
-                  </div>
-              </div>
-          </form>
-      </div>
-    </div>
-  </div>
     
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

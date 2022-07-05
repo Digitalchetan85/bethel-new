@@ -46,17 +46,21 @@
     </div>
 
     <div id="contact-form" class="position-absolute top-50 end-0 translate-middle-y me-5" style="z-index:1;">
-        <form class="rounded bg-white p-2">
+        <form class="rounded bg-white p-2" wire:submit.prevent='submit'>
             <div class="container">
-                <h3 class="fs-4 text-primary">Get Instant Call Back</h3>
+                <h3 class="fs-4 text-primary text-center mb-1"> Please fill the details.</h3>
+                <h3 class="fs-5 text-center"> Get Instant Call Back</h3>
                 <div class="row mb-2">
                     <div class="col-md-12">
                         <div class="input-group">
                             <span class="input-group-text" id="basic-addon1"><i
                                     class="fa fa-user text-primary"></i></span>
                             <input type="text" class="form-control" placeholder="Name" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                                aria-describedby="basic-addon1" wire:model="name">
                         </div>
+                        @error('name')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -65,20 +69,35 @@
                             <span class="input-group-text" id="basic-addon1"><i
                                     class="fa fa-envelope text-primary"></i></span>
                             <input type="email" class="form-control" placeholder="Email" aria-label="Email"
-                                aria-describedby="basic-addon1">
+                                aria-describedby="basic-addon1" wire:model="email">
+                        </div>
+                        @error('email')
+                        <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa fa-envelope text-primary"></i></span>
+                            <select class="form-control" wire:model="type">
+                                <option class="text-primary">Select Service</option>
+                                <option value="Laptop Service" class="text-primary">Laptop Service</option>
+                                <option value="Mac Service" class="text-primary">Mac Service</option>
+                                <option value="Desktop Service" class="text-primary">Desktop Service</option>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col-md-12">
-                        <input id="country_selector" type="text" class="form-control w-100">
-                        <label for="country_selector" style="display:none;">Select a country here...</label>
+                        <input id="phone" name="phone" type="tel" class="form-control" placeholder="XXXXXXXXXX"
+                            wire:model="phone" />
                     </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-12">
-                        <input id="phone" name="phone" type="tel" class="form-control" placeholder="XXXXXXXXXX">
-                    </div>
+                    @error('phone')
+                    <small class="text-danger">{{ $phone }}</small>
+                    @enderror
                 </div>
                 <div class="row mb-2 d-none">
                     <div class="col-md-12">
@@ -89,8 +108,21 @@
                             here</label>
                     </div>
                 </div>
+
+                <div wire:loading wire:target="submit" class="text-center">
+                    <div class="spinner-border text-success text-center" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
                 <div class="row-mb-2">
                     <div class="col-md-12">
+                        @if (Session::has('success'))
+                        <div class="alert alert-success" role="alert">{{ Session::get('success') }}</div>
+                        @endif
+                        @if (Session::has('error'))
+                        <div class="alert alert-danger" role="alert">{{ Session::get('error') }}</div>
+                        @endif
                         <button type="submit" class="btn btn-primary form-control">Submit</button>
                     </div>
                 </div>
@@ -103,26 +135,26 @@
 
     <div id="second-section" class="py-3 py-md-3 bg-primary">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-8 align-self-center">
                     <div class="text-center">
                         <h2 class="text-white">Get Your Laptop Service at just 499*/-</h2>
                     </div>
                 </div>
-                <div class="col-md-4 align-self-center">
+                {{-- <div class="col-md-4 align-self-center">
                     <div class="text-center">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Call Now
-</button>
+                        <a class="btn btn-primary" href="#first-section">
+                            Call Now
+                        </a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
 
     <div class="block py-3 py-md-5">
         <div class="container">
-            <div class="row category-carousel">
+            <div class="row category-carousel g-3">
                 <div class="col-sm-4">
                     <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
                         <div class="image">
@@ -213,93 +245,107 @@
                     <div class="owl-carousel owl-theme" id="mac-repair">
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-1.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Macbook Water Damage Repair</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-2.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Macbook Air Repair</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-3.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Mac Hard Drive Replacement
                                     </h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-4.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Macbook Battery Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-5.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">iMac Repair</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-6.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Macbook Keyboard Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-3-7.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Mac Screen Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -318,66 +364,77 @@
                     <div class="owl-carousel owl-theme" id="laptop-repair">
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-1-1.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-1-1.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Laptop Keyboard Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-1-2.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-1-2.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Laptop Screen Repair</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-1-3.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-1-3.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Laptop Power Jack Replacement
                                     </h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go Somewhere
-</button>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-1-4.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-1-4.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Laptop Cleaning Service</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button>                                </div>
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-1-5.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-1-5.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Laptop Fan Replacement</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -396,94 +453,108 @@
                     <div class="owl-carousel owl-theme" id="pc-repair">
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-1.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-1.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Computer Won’t Turn On</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-2.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-2.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Noisy Computer</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-3.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-3.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Computer Fails to Start
                                     </h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    {{-- <a href="#" class="btn-sm btn-primary text-decoration-none">Go somewhere</a> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Go somewhere
-                                      </button> 
+                                    {{-- <a href="#" class="btn-sm btn-primary text-decoration-none">Book Now</a> --}}
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-4.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-4.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Computer Freezes and Restarts</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-5.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-5.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Computer is Too Slow</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-6.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-6.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Printer, Keyboard or Mouse Doesn’t Work</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="card">
-                                <img src="{{asset('assets/images/img-service-2-7.jpg')}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <img src="{{asset('assets/images/img-service-2-7.jpg')}}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Screen Doesn’t Show Anything</h5>
-                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
+                                        make up
                                         the bulk of the card's content.</p> --}}
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Go somewhere
-</button> 
+                                    <a class="btn btn-primary" href="#first-section">
+                                        Book Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -499,8 +570,10 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="h-lg pb-4">Get <span class="color">Your Computer</span> Fixed NOW!</h2>
-                    <h3 class="subtitle"> <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800 37944 / </a>  
-                                <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804 70007</a></span></h3>
+                    <h3 class="subtitle"> <a href="tel:09880037944" class="text-decoration-none text-primary">+91 98800
+                            37944 / </a>
+                        <a href="tel:08880470007" class="text-decoration-none text-primary">+91 88804 70007</a></span>
+                    </h3>
                     <p class="info">for one of our professional computer repair techs to help you with your
                         Desktop, Laptop, Mac or other inquiry</p>
                     <div class="btn-inline">
@@ -513,79 +586,119 @@
 
     <section id="faq" class="py-md-5 py-3 bg-light">
         <div class="block">
-			<div class="container">
-				<h2 class="py-2 text-center">Frequently Asked <span class="color">Questions</span></h2>
-				<div class="container">
+            <div class="container">
+                <h2 class="py-2 text-center">Frequently Asked <span class="color">Questions</span></h2>
+                <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="accordion" id="accordionPanelsStayOpenExample">
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    How long will my repair/service take?
-                                    </button>
-                                  </h2>
-                                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                                    <div class="accordion-body">
-                                      <p>We repair most faults within 2-3 days, we also offer a 24 hour priority service (subject to availability of parts if needed). If we need to order parts then we can normally get these next day delivery. We realise how difficult being without your computer can be and we will always try to get it back to you as quickly as possible.</p>
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseOne">
+                                            How long will my repair/service take?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            <p>We repair most faults within 2-3 days, we also offer a 24 hour priority
+                                                service (subject to availability of parts if needed). If we need to
+                                                order parts then we can normally get these next day delivery. We realise
+                                                how difficult being without your computer can be and we will always try
+                                                to get it back to you as quickly as possible.</p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    How much will my repair cost me?
-                                    </button>
-                                  </h2>
-                                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                                    <div class="accordion-body">
-                                    <p>We will always offer you a fixed price for the repair, for example if your laptop screen needs replacing we will give you a total price for the work before starting. In the event we need to diagnose the fault first we charge £30 labour which is waived if you go ahead with the repair. We don’t want you to have any nasty surprises; we want you to know exactly what your repair will cost before we complete the work.</p>
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            How much will my repair cost me?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            <p>We will always offer you a fixed price for the repair, for example if
+                                                your laptop screen needs replacing we will give you a total price for
+                                                the work before starting. In the event we need to diagnose the fault
+                                                first we charge £30 labour which is waived if you go ahead with the
+                                                repair. We don’t want you to have any nasty surprises; we want you to
+                                                know exactly what your repair will cost before we complete the work.</p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    Why would I want to use you when I could go to a big brand high street store such as PC World?
-                                    </button>
-                                  </h2>
-                                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                                    <div class="accordion-body">
-                                    <p>Offering a personal service is top of our list; you will speak directly to the person working on your computer so you can explain the situation in detail. We turnaround repairs quickly, we don’t send anything away to service centres and we don’t quote 5+ days for repairs. We don’t charge any upfront costs, you only pay for work once it’s completed and when you are happy with it.</p>
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Why would I want to use you when I could go to a big brand high street store
+                                            such as PC World?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingThree">
+                                        <div class="accordion-body">
+                                            <p>Offering a personal service is top of our list; you will speak directly
+                                                to the person working on your computer so you can explain the situation
+                                                in detail. We turnaround repairs quickly, we don’t send anything away to
+                                                service centres and we don’t quote 5+ days for repairs. We don’t charge
+                                                any upfront costs, you only pay for work once it’s completed and when
+                                                you are happy with it.</p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="panelsStayOpen-headingfour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false" aria-controls="panelsStayOpen-collapsefour">
-                                    Can you replace cracked/damaged laptop screens?
-                                    </button>
-                                  </h2>
-                                  <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfour">
-                                    <div class="accordion-body">
-                                    <p>Absolutely, we repair laptop screens all the time and it’s much cheaper than buying a new laptop. Contact Us for a quick quote, we have the majority of laptop screens in stock and can normally replace your screen the same day!</p>
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapsefour">
+                                            Can you replace cracked/damaged laptop screens?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingfour">
+                                        <div class="accordion-body">
+                                            <p>Absolutely, we repair laptop screens all the time and it’s much cheaper
+                                                than buying a new laptop. Contact Us for a quick quote, we have the
+                                                majority of laptop screens in stock and can normally replace your screen
+                                                the same day!</p>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="panelsStayOpen-headingfive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
-                                    I’m worried about my data, is it safe?
-                                    </button>
-                                  </h2>
-                                  <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
-                                    <div class="accordion-body">
-                                    <p>We will always take great care in looking after your data. We conform to the Data Protection Act and any data we hold is held in strict confidence. We undertake work for a number of local businesses including solicitors and high street shops and understand how important personal data is. Any customer data that is stored is always stored password protected and in encrypted format. We always advise if possible you take a backup of any data on your computer prior to any work being undertaken and we can discuss any backup options with you if needed.</p>
-        
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+                                            I’m worried about my data, is it safe?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingfive">
+                                        <div class="accordion-body">
+                                            <p>We will always take great care in looking after your data. We conform to
+                                                the Data Protection Act and any data we hold is held in strict
+                                                confidence. We undertake work for a number of local businesses including
+                                                solicitors and high street shops and understand how important personal
+                                                data is. Any customer data that is stored is always stored password
+                                                protected and in encrypted format. We always advise if possible you take
+                                                a backup of any data on your computer prior to any work being undertaken
+                                                and we can discuss any backup options with you if needed.</p>
+
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-			</div>
-		</div>
+            </div>
+        </div>
     </section>
 
     <section id="why-us" class="py-3 py-md-5">
@@ -662,6 +775,6 @@
 
 
 
-    
+
 
 </div>
